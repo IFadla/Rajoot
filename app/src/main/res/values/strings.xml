@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Rajoot</string>
+    <string name="desc_start">Aplikasi Rajoot merupakan penyedia layanan untuk menjual dan beli kerajinan tangan</string>
+    <string name="desc_login">Selamat datang silahkan masuk untuk menggunakan layanan rajoot</string>
+    <string name="desc_register">Yuk lengkapi data dibawah ini untuk daftar, agar kamu bisa masuk ke aplikasi </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

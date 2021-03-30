@@ -7,7 +7,7 @@
     android:padding="40dp"
     tools:context=".LoginActivity">
 
-    <!--  Container Header login  -->
+    <!--  Container header login  -->
     <LinearLayout
         android:id="@+id/header_login"
         android:layout_width="match_parent"

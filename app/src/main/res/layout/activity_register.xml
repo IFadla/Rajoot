@@ -7,7 +7,7 @@
     android:padding="40dp"
     tools:context=".RegisterActivity">
 
-    <!--  Container Header register  -->
+    <!--  Container header register  -->
     <LinearLayout
         android:id="@+id/header_register"
         android:layout_width="match_parent"

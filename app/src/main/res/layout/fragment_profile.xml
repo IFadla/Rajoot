@@ -5,16 +5,189 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     tools:context=".ProfileFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!--  Container icon profile  -->
+    <LinearLayout
+        android:id="@+id/container_icon_profile"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/container_item_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="9dp"
+            android:src="@drawable/ic_profile" />
+        <TextView
+            android:id="@+id/full_name_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jhon Doe"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/verify_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Klik untuk verifikasi"
+            android:fontFamily="@font/poppins_italic"
+            android:textColor="@color/gray1"
+            android:textSize="12dp"
+            android:textAlignment="center" />
+    </LinearLayout>
 
+    <!--  Container item profile  -->
+    <LinearLayout
+        android:id="@+id/container_item_profile"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/box_profile"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--  Item kerjainan dijual  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="30dp"
+            android:background="@drawable/box_list_item_profile"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/item_kerajinan_dijual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_box"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kerajinan Dijual"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--  Item beri rating  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="30dp"
+            android:background="@drawable/box_list_item_profile"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/item_beri_nilai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beri Rating"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="v 1.0"
+                    android:textSize="12dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/gray2"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--  Item informasi  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="30dp"
+            android:background="@drawable/box_list_item_profile"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/item_informasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_information"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Informasi"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--  Item keluar  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="30dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/item_keluar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_logout"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Keluar"
+                    android:textSize="14dp"
+                    android:textColor="@color/green"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

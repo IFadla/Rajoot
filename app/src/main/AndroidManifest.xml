@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Rajoot">
-        <activity android:name=".SellActivity"></activity>
+        <activity android:name=".UpdateCraftActivity"></activity>
+        <activity android:name=".CraftDetailsActivity" />
+        <activity android:name=".InformationActivity" />
+        <activity android:name=".CraftsForSaleActivity" />
+        <activity android:name=".SellActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".StartActivity" />

@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
             return true;
         }
+
+
     };
 
     // Method for go to sell activity when item sell checked
@@ -54,4 +56,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), SellActivity.class));
         overridePendingTransition(0,0);
     }
+
+
+
 }

@@ -9,11 +9,14 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    public static final int TIME_INTERVAL = 2000;
+    private long backPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,19 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(0,0);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (backPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            return;
+        } else {
+            Toast.makeText(MainActivity.this,"Press Back Again!",Toast.LENGTH_SHORT).show();
+        }
 
+        backPressed = System.currentTimeMillis();
+    }
 
 }

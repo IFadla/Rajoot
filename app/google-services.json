@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "296470060879",
+    "project_id": "rajoot-8df99",
+    "storage_bucket": "rajoot-8df99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296470060879:android:a4f84b0dd438af71c12f3a",
+        "android_client_info": {
+          "package_name": "umn.ac.id.rajoot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296470060879-84m0gkh02q104m8ngphb08b58tsv7h9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFAhpH0dGJ8jQGAN_uAhOMz_0bcuFnSLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296470060879-84m0gkh02q104m8ngphb08b58tsv7h9s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

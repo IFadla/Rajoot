@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class StartActivity extends AppCompatActivity {
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +18,13 @@ public class StartActivity extends AppCompatActivity {
 
         // Hide actionbar this splashscreen
         getSupportActionBar().hide();
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        if (firebaseAuth.getCurrentUser() != null) {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
+        }
     }
 
     // When the button mulai clicked then go to the login activity

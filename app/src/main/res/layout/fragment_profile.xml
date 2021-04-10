@@ -28,15 +28,26 @@
             android:id="@+id/full_name_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jhon Doe"
+            android:text=" "
             android:textSize="24dp"
             android:textAlignment="center"
             android:textColor="@color/white" />
         <TextView
-            android:id="@+id/verify_text"
+            android:id="@+id/not_verify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="Klik untuk verifikasi"
+            android:fontFamily="@font/poppins_italic"
+            android:textColor="#F65151"
+            android:textSize="12dp"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:text="Terverifikasi"
             android:fontFamily="@font/poppins_italic"
             android:textColor="@color/gray1"
             android:textSize="12dp"
@@ -190,4 +201,54 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_verify_email"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white" >
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_verify_logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_verify" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:paddingHorizontal="45dp"
+                android:text="@string/desc_verify"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_verify_logout"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="40dp"
+            android:background="@drawable/box_button_orange"
+            android:fontFamily="@font/poppins_semibold"
+            android:stateListAnimator="@null"
+            android:text="Keluar"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

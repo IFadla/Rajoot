@@ -13,4 +13,23 @@
     <color name="pink">#F49B9D</color>
     <color name="gray1">#BFBFBF</color>
     <color name="gray2">#7D7D7D</color>
+
+    <color name="green_two">#255E29</color>
+    <color name="green_three">#255E29</color>
+    <color name="gray_two">#BFBFBF</color>
+    <color name="gray_three">#BFBFBF</color>
+
+
+
+    <array name="active">
+        <item>@color/green</item>
+        <item>@color/green_two</item>
+        <item>@color/green_three</item>
+    </array>
+
+    <array name="inactive">
+        <item>@color/gray1</item>
+        <item>@color/gray_two</item>
+        <item>@color/gray_three</item>
+    </array>
 </resources>

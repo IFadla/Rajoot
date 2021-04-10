@@ -2,7 +2,13 @@
     <string name="app_name">Rajoot</string>
     <string name="desc_start">Aplikasi Rajoot merupakan penyedia layanan untuk menjual dan beli kerajinan tangan</string>
     <string name="desc_login">Selamat datang silahkan masuk untuk menggunakan layanan rajoot</string>
-    <string name="desc_register">Yuk lengkapi data dibawah ini untuk daftar, agar kamu bisa masuk ke aplikasi </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc_register">Yuk lengkapi data dibawah ini untuk daftar, agar kamu bisa masuk ke aplikasi</string>
+    <string name="desc_verify">Link verifikasi sudah dikirim ke email kamu! jika sudah melakukan verifikasi, segera keluar dan masuk kembali</string>
+
+    <string name="title_onboarding_one">Hanya Sekali Klik Untuk Menghubungi</string>
+    <string name="desc_onboarding_one">Ketika kamu sudah mendapatkan produk yang diinginkan, lalu kamu dapat melakukan negosiasi kepada penjual dengan sekali klik saja</string>
+    <string name="title_onboarding_two">Temukan Produk Kerajinan</string>
+    <string name="desc_onboarding_two">Rajoot merupakan pusat jual beli produk-produk kerajinan sehingga kamu tidak perlu kebingungan untuk mencarinya lagi</string>
+    <string name="title_onboarding_three">Pengerajin Saling Terhubung</string>
+    <string name="desc_onboarding_three">Rajoot dapat menjadikan wadah bagi pengrajin-pegrajin di indonesia untuk menjual produk-produk kerajinannya.  </string>
 </resources>

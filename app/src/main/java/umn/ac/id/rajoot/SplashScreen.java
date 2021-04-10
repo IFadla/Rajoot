@@ -9,6 +9,8 @@ import android.os.Looper;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override
@@ -23,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent = new Intent(SplashScreen.this, StartActivity.class);
+                Intent homeIntent = new Intent(SplashScreen.this, ContainerOnboarding.class);
                 startActivity(homeIntent);
                 overridePendingTransition(0,0);
                 finish();

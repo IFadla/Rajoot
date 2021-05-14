@@ -25,7 +25,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.shape.CornerFamily;
+import com.google.android.material.shape.MaterialShapeDrawable;
 
 import java.io.IOException;
 import java.util.List;
@@ -35,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     BottomNavigationView bottomNavigationView;
     public static final int TIME_INTERVAL = 2000;
     private long backPressed;
+    FloatingActionButton fab;
+    BottomAppBar bottomAppBar;
 
     TextView tvCity;
     LocationManager locationManager;
@@ -52,7 +58,23 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         grantPermission();
 
-        tvCity = findViewById(R.id.lokasi_kota);
+        bottomAppBar    = findViewById(R.id.bottom_app_bar);
+        fab             = findViewById(R.id.fab);
+        tvCity          = findViewById(R.id.lokasi_kota);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goToSellActivity();
+            }
+        });
+
+        MaterialShapeDrawable bottomBarBackground = (MaterialShapeDrawable) bottomAppBar.getBackground();
+        bottomBarBackground.setShapeAppearanceModel(
+                bottomBarBackground.getShapeAppearanceModel()
+                        .toBuilder()
+                        .setTopRightCorner(CornerFamily.ROUNDED, 58)
+                        .setTopLeftCorner(CornerFamily.ROUNDED, 58)
+                        .build());
 
         // Hide actionbar this splashscreen
         getSupportActionBar().hide();

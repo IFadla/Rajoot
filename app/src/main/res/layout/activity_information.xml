@@ -313,6 +313,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
+    <include
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/item_toolbar"/>
+
     <LinearLayout
         android:id="@+id/container_copyrights"
         android:layout_width="match_parent"

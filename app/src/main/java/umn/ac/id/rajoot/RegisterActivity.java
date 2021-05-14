@@ -81,7 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 LLProgressBarRegister.setVisibility(View.VISIBLE);
-
+                
                 // Register the user in firebase
                 firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

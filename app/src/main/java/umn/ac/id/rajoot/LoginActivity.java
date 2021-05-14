@@ -3,7 +3,9 @@ package umn.ac.id.rajoot;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,6 +27,8 @@ public class LoginActivity extends AppCompatActivity {
     Button mLoginBtn;
     LinearLayout LLProgressBarLogin;
     FirebaseAuth firebaseAuth;
+    private SharedPreferences prefs;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +71,11 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            prefs = getSharedPreferences("Data", Context.MODE_PRIVATE);
+                            editor = prefs.edit();
+
+                            editor.putString("user", mEmail.getText().toString());
+                            editor.apply();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
                             Toast.makeText(LoginActivity.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

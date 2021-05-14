@@ -11,4 +11,10 @@
     <string name="desc_onboarding_two">Rajoot merupakan pusat jual beli produk-produk kerajinan sehingga kamu tidak perlu kebingungan untuk mencarinya lagi</string>
     <string name="title_onboarding_three">Pengerajin Saling Terhubung</string>
     <string name="desc_onboarding_three">Rajoot dapat menjadikan wadah bagi pengrajin-pegrajin di indonesia untuk menjual produk-produk kerajinannya.  </string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

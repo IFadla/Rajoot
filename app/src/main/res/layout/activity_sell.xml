@@ -8,14 +8,248 @@
     android:background="@color/white"
     tools:context=".SellActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sell"
-        android:textSize="40dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="140dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unggah Gambar *"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/imageView"
+                android:src="@drawable/g1"
+                android:visibility="gone"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_img_sell"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/box_button_gray"
+                android:fontFamily="@font/poppins_semibold"
+                android:stateListAnimator="@null"
+                android:text="Pilih Gambar"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judul *"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/box_input_form"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/input_sell_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Vas Bunga"
+                    android:inputType="text"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harga *"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/box_input_form"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/input_sell_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@android:color/transparent"
+                    android:hint="800000"
+                    android:inputType="number"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomor Telepon *"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/box_input_form"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/input_sell_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@android:color/transparent"
+                    android:hint="+6289646724211"
+                    android:inputType="phone"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kondisi *"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/box_input_form"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/input_sell_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Baru"
+                    android:inputType="text"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi *"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/box_input_form"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/input_sell_description"
+                    android:layout_width="match_parent"
+                    android:gravity="start"
+                    android:layout_height="112dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Deskripsi Produk"
+                    android:inputType="text|textMultiLine"
+                    android:padding="16dp"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_sell"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginBottom="62dp"
+                android:background="@drawable/box_button_orange"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Jual"
+                android:layout_marginTop="24dp"
+                android:textAllCaps="false"
+                android:textColor="@color/green"
+                android:textSize="14dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintBottom_toTopOf="@+id/btn_go_to_register"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/item_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/container_progress_bar_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:gravity="center">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/green"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tunggu yaa..."
+            android:textSize="12dp"
+            android:layout_marginTop="19dp"
+            android:textColor="@color/green"
+            android:textAlignment="center"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

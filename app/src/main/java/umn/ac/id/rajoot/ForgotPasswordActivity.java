@@ -24,6 +24,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
+        //Define every single id on forgot password
         mEmail          = findViewById(R.id.input_forgot_email);
         mBtnForgot      = findViewById(R.id.btn_forgot_password);
         firebaseAuth    = FirebaseAuth.getInstance();

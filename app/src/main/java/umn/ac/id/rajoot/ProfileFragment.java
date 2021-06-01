@@ -56,15 +56,6 @@ public class ProfileFragment extends Fragment {
     FirebaseFirestore firebaseFirestore;
     String userID;
 
-//    TextView tvCity;
-//    LocationManager locationManager;
-//
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        getLocation();
-//    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
@@ -81,12 +72,6 @@ public class ProfileFragment extends Fragment {
         firebaseAuth        = FirebaseAuth.getInstance();
         firebaseFirestore   = FirebaseFirestore.getInstance();
         userID              = firebaseAuth.getCurrentUser().getUid();
-
-//        grantPermission();
-//
-//        tvCity = view.findViewById(R.id.lokasi_kota);
-//
-//        checkLocationIsEnabledOrNot(); //this will redirect us to the location setting
 
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
@@ -168,97 +153,18 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
-//    private void getLocation() {
-//        try {
-//            locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-//            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 500, 5, (LocationListener) this);
-//        } catch (SecurityException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    private void checkLocationIsEnabledOrNot() {
-//        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-//        boolean gpsEnabled = false;
-//        boolean networkEnabled = false;
-//
-//        try {
-//            gpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        try {
-//            networkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        if (!gpsEnabled && !networkEnabled) {
-//            new AlertDialog.Builder(getContext())
-//                    .setTitle("Enable GPS Service")
-//                    .setCancelable(false)
-//                    .setPositiveButton("Enable", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            //this intent redirect us to the location settings, if GPS is disabled this dialog will be show
-//                            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-//                        }
-//                    }).setNegativeButton("Cancel", null)
-//                    .show();
-//        }
-//
-//    }
-//
-//    private void grantPermission() {
-//        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-//                && ActivityCompat.checkSelfPermission(getActivity().getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-//            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 100);
-//        }
-//    }
-//
-//    @Override
-//    public void onLocationChanged(@NonNull Location location) {
-//        try {
-//            Geocoder geocoder = new Geocoder(getActivity().getApplicationContext(), Locale.getDefault());
-//            List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-//
-//            tvCity.setText(addresses.get(0).getSubAdminArea());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    @Override
-//    public void onStatusChanged(String provider, int status, Bundle extras) {
-//
-//    }
-//
-//    @Override
-//    public void onProviderEnabled(@NonNull String provider) {
-//
-//    }
-//
-//    @Override
-//    public void onProviderDisabled(@NonNull String provider) {
-//
-//    }
-
-    // When the button daftar clicked then go to the crafts for sale activity
     public void goToCraftForSale() {
         Intent intent = new Intent(getActivity(), CraftsForSaleActivity.class);
         startActivity(intent);
     }
 
-    // When the button daftar clicked then go to the information activity
     public void goToInformation() {
         Intent intent = new Intent(getActivity(), InformationActivity.class);
         startActivity(intent);
     }
 
-    // When the button daftar clicked then go to the google form
     public void goToFormRating() {
-        Toast.makeText(getActivity(),"Google Form Under Maintenance!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(),"Beri Rating Kami di Play Store!",Toast.LENGTH_SHORT).show();
     }
 
     public void logoutAccount() {

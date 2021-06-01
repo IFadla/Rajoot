@@ -8,6 +8,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -15,6 +17,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
+    TextView text_title_toolbar;
+    ImageView back;
     EditText mEmail;
     Button mBtnForgot;
     FirebaseAuth firebaseAuth;
@@ -28,6 +32,22 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         mEmail          = findViewById(R.id.input_forgot_email);
         mBtnForgot      = findViewById(R.id.btn_forgot_password);
         firebaseAuth    = FirebaseAuth.getInstance();
+
+        // Hide actionbar this splashscreen
+        getSupportActionBar().hide();
+
+        //Set custom action bar id
+        text_title_toolbar  = (TextView) findViewById(R.id.text_title_toolbar);
+        back                = (ImageView) findViewById(R.id.back_toolbar);
+
+        //Set action and value action bar
+        text_title_toolbar.setText("Lupa Password");
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         mBtnForgot.setOnClickListener(new View.OnClickListener() {
             @Override
